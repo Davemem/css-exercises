@@ -1,6 +1,10 @@
+/* CASCADE SPECIFICITY AND INHERITANCE are the key points
+refer to https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 
 .para,
 .small-para {
@@ -8,20 +12,15 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
 .para {
   font-size: 22px;
 }
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+/* order adjusted to be below para which was overiding it */
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -35,8 +34,16 @@ body {
   font-size: 14px;
 }
 
-div.text {
+child.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
 }
+/* chained selector changed from div to child to align with it's specific two selectors within it's class */
+
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
+} 
+/* Changed order to last in cascade to increase up the order */
