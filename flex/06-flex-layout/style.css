@@ -5,6 +5,8 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display:flex;
+  flex-direction:column;
 }
 
 img {
@@ -16,6 +18,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding:5px 15px;
+  
 }
 
 input {
@@ -23,4 +27,65 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/* REMOVE TRAILING WHITESPACE OF LISTS */
+
+ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+/* REMOVE DEFAULT BLUE UNDERLINED LINKS */
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* HEADER / FOOTER CONTENT */
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  margin:15px;
+  height:20px;
+
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  background-color:#eeeeee;
+  padding:10px;
+  height:20px;
+}
+
+.left-links{
+ display:flex;
+ flex-direction:row;
+ color: rgb(141, 141, 141);
+}
+
+.right-links{
+  display:flex;
+  flex-direction:row;
+}
+
+.left-links, .right-links{
+  gap:20px;
+  color: rgb(141, 141, 141);
+}
+
+/* MAIN CONTENT */
+
+.content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  row-gap:15px;
+  flex-grow:1;
+  overflow:auto;
 }
